@@ -1,0 +1,109 @@
+.search-wrapper {
+    height: 50px;
+    width: 240px;
+}
+
+.search-wrapper .input-holder {
+    overflow: hidden;
+    top: 12px;
+    height: 30px;
+    width: 220px;
+    left: 10px;
+    position: relative;
+    border-radius: 40px;
+    background: #00000030;
+    -webkit-transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    -moz-transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+
+.search-wrapper .input-holder .search-input {
+    width: 100%;
+    height: 30px;
+    padding: 0px 40px 0 20px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Open Sans", Arial, Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFF;
+    -webkit-transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    -moz-transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+}
+
+.search-wrapper .input-holder .search-icon {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    padding: 0px;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    float: right;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 35px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.search-wrapper .input-holder .search-icon span {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    -webkit-transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+    -moz-transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+    transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.search-wrapper .input-holder .search-icon span::before,
+.search-wrapper .input-holder .search-icon span::after {
+    position: absolute;
+    content: '';
+}
+
+.search-wrapper .input-holder .search-icon span::before {
+    width: 3px;
+    height: 12px;
+    left: 4px;
+    top: 8px;
+    border-radius: 2px;
+    background: #df9e53c0;
+}
+
+.search-wrapper .input-holder .search-icon span::after {
+    width: 9px;
+    height: 9px;
+    left: -2px;
+    top: -5px;
+    border-radius: 12px;
+    border: 3px solid #DF9D53c0;
+}
+
+@media screen and (max-width: 560px) {
+    .search-wrapper .input-holder {
+        width: 200px;
+    }
+}

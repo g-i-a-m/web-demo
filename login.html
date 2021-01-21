@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>互动课堂</title>
+    <link rel="icon" sizes="192x192" href="./images/logo.jpg">
+    <link href="./loginpage/css/default.css" rel="stylesheet" type="text/css">
+    <link href="./loginpage/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./loginpage/css/demo.css" rel="stylesheet" type="text/css">
+    <link href="./loginpage/css/loaders.css" rel="stylesheet" type="text/css">
+    <link id="layuicss-skinlayercss" rel="stylesheet" href="./loginpage/css/layer.css" media="all">
+</head>
+
+<body style="background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAJxCAYAAAAjN7CPAAADl0lEQVR4Xu3TBVIVUBxGcdkIiKSEiMADEcQnOKPYCEpIdzePfKTd3d2d+9NlHGbuuSs48/t/NyHxYOzfFvAlGKBA4qFZeITBByTRAnxA9Rw7wiQDFKieZ0e49bABCizAIzxiACyQTJ+ADzi6yP6CZAMUOLbEjnCbAQocj8MjNIAWSOEDltkRppwwQIEVeIQn4YBUA3iBVXaEqTUGhC6QVrPGjjDtlAEKrMMjrA09IJ0WMCC9doP9Bel1BoQukFF3jh1hxmkDFDgPj/BM6AGZtMAmCLjAjjCz3gAFLrIj3F5PBzQYgAtcgkfYQAc0hh6QRQtkNV5mR8gHNNECBjRdgUdIB2SfhQUM2AQCV9lfkN1sACyQQ58gp/kaO0I+oIUWMKDlOjxCOiC3FRYwILf1BjtCPqCNFgg+YEfbTXaEfEA7LWBA+y14hHhAByyQZ0DHbXaEeQZ00ifgA+6wI9zZGXxAFy1gQNdd+BfgAd2wQL4B3ffYEebjAT20gAE999kR7sIDemkBA3ofwCM0oA8+QQEf8JAdYUFf8AH9tAAf8AgeYT8cUIgHDNACfMBjdoSFA8EHDNICdEDR4BN2hAYUDdEnMGDoKfwL6IAIHjAMnyDCBzxjRxgZDj5ghBagA4pHnrMjNKB4lD4BH/ACHuFo6AElY7DAJgh4yY6wZMwAWmAcD3jFjnD3uAG0wAQe8Boe4YQBsEDpJB7whh1h6aQBtMCUAW/ZX7BnKviAaVqAD3gHj3DaAFigbAYPeM+OsGzGAFoghgd8gEcYgwPKDZilTzD7kR1huQG4wBy8gb1zn9gRGsALzNMbmP8MjzD4gApagA9Y+MKOsMIABRbhEe5b/Mr+AgN4gSV6A0vf4BEGHxClBaJxeAPR+Hd2hAbwAsv0BpZ/sCPcb4ACKz/hERpAC1TiAau/2BFWGqDA2m94hHRAlQG4wPofdoRVBgQvcGDjLztCAxRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUCB4gf+vcbAKwTH2PgAAAABJRU5ErkJggg==&quot;);">
+    <div class="login">
+        <div class="login_title">
+            <span>互动小班课</span>
+        </div>
+        <div class="login_fields">
+            <div class="login_fields__user">
+                <div class="icon">
+                    <img alt="" src="./loginpage/images/user_icon.png">
+                </div>
+                <input id="editnick" placeholder="nickname" maxlength="12" type="text" autocomplete="off" value="狗子你变了">
+                <div class="validation">
+                    <img alt="" src="./loginpage/images/tick.png">
+                </div>
+            </div>
+            <div class="login_fields__password">
+                <div class="icon">
+                    <img alt="" src="./loginpage/images/lock_icon.png">
+                </div>
+                <input id="editpwd" placeholder="password" maxlength="12" type="text" autocomplete="true">
+                <div class="validation">
+                    <img alt="" src="./loginpage/images/tick.png">
+                </div>
+            </div>
+
+            <div class="login_fields__submit">
+                <input id="loginbtn" type="button" value="登录">
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>做善良的人</p>
+        </div>
+    </div>
+    <div class="authent">
+        <div class="loader" style="height: 44px;width: 44px;margin-left: 28px;">
+            <div class="loader-inner ball-clip-rotate-multiple">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <p>认证中...</p>
+    </div>
+    <div class="OverWindows"></div>
+    <link href="./loginpage/css/layui.css" rel="stylesheet" type="text/css">
+    <script src="./loginpage/js/jquery-1.10.2.js"></script>
+    <script src="./loginpage/js/jquery.min.js"></script>
+    <script src="./loginpage/js/jquery-ui-1.11.0.js"></script>
+    <script src="./loginpage/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./loginpage/js/stopExecutionOnTimeout.js"></script>
+    <script type="text/javascript" src="./loginpage/js/layui.js"></script>
+    <script type="text/javascript" src="./loginpage/js/Particleground.js"></script>
+    <script type="text/javascript" src="./loginpage/js/Treatment.js"></script>
+    <script type="text/javascript" src="./loginpage/js/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="./loginpage/js/login.js"></script>
+    <script type="text/javascript" src="./loginpage/js/ThreeWebGL.js"></script>
+    <script type="text/javascript" src="./loginpage/js/ThreeExtras.js"></script>
+    <script type="text/javascript" src="./loginpage/js/Detector.js"></script>
+    <script type="text/javascript" src="./loginpage/js/RequestAnimationFrame.js"></script>
+    <script id="vs" type="x-shader/x-vertex">
+        varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        uniform sampler2D map; uniform vec3 fogColor; uniform float fogNear; uniform float fogFar; varying vec2 vUv; void main() { float depth = gl_FragCoord.z / gl_FragCoord.w; float fogFactor = smoothstep( fogNear, fogFar, depth ); gl_FragColor = texture2D(
+        map, vUv ); gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 ); gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor ); }
+
+    </script>
+    <script type="text/javascript" src="./loginpage/js/cloud.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+/* 以下实际使用若已初始化可删除 .lsm-sidebar height父级需逐级设置为100%*/
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px "微软雅黑", "宋体", "Arial Narrow", HELVETICA;
+    -webkit-text-size-adjust: 100%;
+    background: url(../images/bg.jpg) no-repeat center center;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 以上实际使用若已初始化可删除 */
+
+.bg {
+    /* background-color: #37474f; */
+    background-color: #00000000;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.main {
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.userlist {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #00000080;
+    height: 100%;
+    width: 240px;
+    float: left;
+}
+
+.lsm-container {
+    top: 50px;
+    height: calc(100% - 50px);
+    width: 100%;
+    min-width: 240px;
+    transition: all .3s;
+}
+
+.lsm-container li>a.active {
+    background: #e60f0f;
+    color: #fff;
+}
+
+.slimScrollDiv {
+    position: absolute;
+    height: calc(100%);
+}
+
+.slimScrollBar {
+    position: absolute;
+    height: calc(100%);
+}
+
+.slimScrollRail {
+    position: absolute;
+    height: calc(100%);
+}
+
+.lsm-scroll {
+    width: 240px;
+    height: 100%;
+    background: #3b3e4740;
+}
+
+.lsm-sidebar a {
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    line-height: 35px;
+    max-height: 35px;
+    color: #b5b5b5;
+    transition: all .3s;
+}
+
+.lsm-container ul:first-child>li>a,
+.lsm-container ul:first-child>li>a span {
+    line-height: 35px;
+    max-height: 35px;
+}
+
+.lsm-sidebar a span {
+    margin-left: 10px;
+}
+
+.lsm-sidebar .list-subitem a span {
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.lsm-sidebar .list-item .list-item>ul>li a span {
+    margin-left: 60px;
+}
+
+.list-item {
+    position: relative;
+}
+
+.list-item ul {
+    display: block;
+    background: #00000010;
+}
+
+.list-item>a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 5px;
+    height: 35px;
+    background: #34A0CE;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.lsm-container ul:first-child>li.list-item>a:before {
+    height: 35px;
+}
+
+.lsm-sidebar .lsm-sidebar-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+.lsm-sidebar-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+
+/* 导航右侧箭头 换用其他字体需要替换*/
+
+.lsm-sidebar-more::after {
+    content: "\e621";
+}
+
+.list-item>a:hover {
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.list-item>a:hover:before {
+    opacity: 1;
+}
+
+.list-item li>a:hover {
+    color: #FFF;
+    background: #6e809c;
+}
+
+.MultifuncArea {
+    background-color: #00000000;
+    left: 240px;
+    height: 100%;
+    width: calc(100% - 240px);
+    transition: all .3s;
+    float: left;
+}
+
+.screen1 {
+    z-index: 1;
+    
+    background-color: #00000000;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    min-width: 240px;
+    transition: all .3s;
+}
+
+.splitscreen1-l {
+    z-index: 2;
+    width: 160px;
+    height: 120px;
+    top: 0px;
+    right: 10px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-top-right-radius: 5px;
+    background-color: #000000;
+    object-fit: fill;
+}
+
+.splitscreen1-r {
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #000000;
+    object-fit: fill;
+}
+
+.splitscreen4 {
+    z-index: 1;
+    display: none;
+    background-color: #00000000;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    min-width: 240px;
+    transition: all .3s;
+}
+
+.splitscreen4-1,
+.splitscreen4-2,
+.splitscreen4-3,
+.splitscreen4-4 {
+    width: calc(50% - 15px);
+    height: calc(50% - 15px);
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #000000;
+    object-fit: fill;
+}
+
+.docVideoArea {
+    z-index: 2;
+    display: none;
+    background-color: #00ffbf;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    min-width: 240px;
+    transition: all .3s;
+}
+
+.Whiteboard {
+    z-index: 3;
+    display: none;
+    background-color: #0d23e9;
+    top: 10px;
+    left: 10px;
+    height: 100%;
+    width: 100%;
+    min-width: 240px;
+    transition: all .3s;
+}
+
+.docVideo {
+    background-color: #000000;
+    object-fit: scale-down;
+    width: 720px;
+    height: 420px;
+    min-width: 720px;
+    float: left;
+}
+
+.toolbar {
+    background-color: #00000060;
+    width: 100%;
+    height: 60px;
+}

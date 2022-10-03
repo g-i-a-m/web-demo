@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="css/search-form.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
-    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+    <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
     <!-- 按钮样式 -->
     <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
@@ -60,37 +61,43 @@
             <div class="MultifuncArea">
                 <div class="screen1">
                     <!-- src="D:\test\20200517-1.h264" -->
-                    <video class="splitscreen1-l" id="docVideoid" poster="images/1l.png" oncontextmenu="return false;" autoplay muted></video>
-                    <video class="splitscreen1-r" id="docVideoid" oncontextmenu="return false;" autoplay muted></video>
+                    <video class="splitscreen1-l" id="localVideo" poster="images/1l.png" oncontextmenu="return false;" autoplay muted></video>
+                    <video class="splitscreen1-r" id="remoteVideo" oncontextmenu="return false;" autoplay muted></video>
                 </div>
                 <div class="splitscreen4">
-                    <video class="splitscreen4-1" id="docVideoid" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
-                    <video class="splitscreen4-2" id="docVideoid" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
-                    <video class="splitscreen4-3" id="docVideoid" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
-                    <video class="splitscreen4-4" id="docVideoid" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
-                </div>
-                <div class="docVideoArea">
-                    <!--src="/home/ctf/work/Love Death & Robot S01E01.mp4"-->
-                    <!-- <video class="docVideo" id="docVideoid" poster="images/rv.jpg" autoplay muted></video> -->
+                    <video class="splitscreen4-1" id="splitscreen4-1" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                    <video class="splitscreen4-2" id="splitscreen4-2" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                    <video class="splitscreen4-3" id="splitscreen4-3" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                    <video class="splitscreen4-4" id="splitscreen4-4" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
                 </div>
                 <div class="Whiteboard">
-                    <!-- <video class="docVideo" id="docVideoid" poster="images/rv.jpg" autoplay muted></video> -->
+                    <div class="videogroup">
+                        <video class="videogroup-1" id="groupvideo1" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-2" id="groupvideo2" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-3" id="groupvideo3" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-4" id="groupvideo4" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-5" id="groupvideo5" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <!-- <video class="videogroup-6" id="groupvideo6" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-7" id="groupvideo7" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-8" id="groupvideo8" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video>
+                        <video class="videogroup-9" id="groupvideo9" poster="images/rv.jpg" oncontextmenu="return false;" autoplay muted></video> -->
+                    </div>
+                    <audio id="remoteAudio" display="none" autoplay></audio>
+                    <video class="docVideo" id="docVideo" poster="images/rv.jpg" autoplay muted></video>
                 </div>
             </div>
         </div>
         <div class="toolbar">
             <div class="btn-group1">
-                <button class="button button--ujarak button--border-thin button--round-s button--text-thick" style="left: 6px;">Publish</button>
-                <button class="button button--ujarak button--border-thin button--round-s button--text-thick">Publish</button>
+                <button id="btn_publish" class="button button--ujarak button--border-thin button--round-s button--text-thick">Publish</button>
+                <button id="btn_screenshare" class="button button--ujarak button--border-thin button--round-s button--text-thick">Screen</button>
             </div>
             <div class="btn-group2">
-                <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-user"></i><span>User</span></button>
                 <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-bookmark"></i><span>Bookmark</span></button>
                 <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-bookmark"></i><span>Bookmark</span></button>
                 <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-bookmark"></i><span>Bookmark</span></button>
             </div>
             <div class="btn-group3">
-                <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-user"></i><span>User</span></button>
                 <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-bookmark"></i><span>Bookmark</span></button>
                 <button class="button button--sacnite button--round-l"><i class="button__icon icon icon-bookmark"></i><span>Bookmark</span></button>
             </div>
@@ -98,6 +105,14 @@
     </div>
 
 </body>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js" async></script>
+<script src="js/mqtt.min.js"></script>
+<!--script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script-->
+<script src="js/BandwidthHandler.js"></script>
+<script src="js/mqttprocesser.js"></script>
+<script src="js/ms_client.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script src="js/ga.js"></script>
 
 </html>

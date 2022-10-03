@@ -206,7 +206,7 @@ a {
 
 .screen1 {
     z-index: 1;
-    
+    display: none;
     background-color: #00000000;
     top: 0px;
     left: 0px;
@@ -282,24 +282,56 @@ a {
 }
 
 .Whiteboard {
-    z-index: 3;
-    display: none;
-    background-color: #0d23e9;
+    z-index: 1;
+    /* display: none; */
+    background-color: #00000000;
     top: 10px;
     left: 10px;
     height: 100%;
     width: 100%;
     min-width: 240px;
     transition: all .3s;
+    
+}
+.videogroup {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.videogroup-1,
+.videogroup-2,
+.videogroup-3,
+.videogroup-4,
+.videogroup-5,
+.videogroup-6,
+.videogroup-7,
+.videogroup-8,
+.videogroup-9 {
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 150px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #000000;
+    object-fit: fill;
 }
 
 .docVideo {
+    z-index: 2;
     background-color: #000000;
     object-fit: scale-down;
-    width: 720px;
-    height: 420px;
+    width: 100%;
+    height: calc(100% - 160px);
     min-width: 720px;
     float: left;
+    left: 0;
+    right: 0;
+    object-fit: fill;
 }
 
 .toolbar {

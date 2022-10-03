@@ -11,22 +11,28 @@ if (typeof model == 'undefined' || model == null || model == '') {
 }
 
 function join() {
+  const nickname = edit_nick.value;
   if (model == 'invincible') {
     const token = 'eyJpdiI6IlhVd0xZNmU1WEFYQmk5VmQ3cStzRXc9PSIsInZhbHVlIjoiWmR0ckxiVk5aQnRUeCtwV2ZcL0Q1OEVqM3M4eDh2ZWtoRExQQTJxVEhObzJ2UG5wRTJ2TVpcL0dtV2EzZUF0NGdkR2twb1JOWmVWaHhwOCs4K1lJeU1tVzhuNmZna2lqdFE5ODFTMUJvSVVtOFNRcktQTVE2Z3VxcXVkN1Bud0NSeVFcL3FkNkczbUdING1vT0htVGN6TkVRPT0iLCJtYWMiOiJmODAyN2EzNmNjNWMzOTRiYmVkZTM1NTBhZmNkNWE1ZDU5MWZlYTFlYWFhY2U5ZmIzOTViNmNmNjBhOTkxZjhhIn0=';
     const roomid = '2019101810001';
+    const userid = generateUUID();
     const mqtt_addr = '192.168.10.150';
     const mqtt_topic = '192.168.10.150';
+    const mqtt_user = 'admin';
+    const mqtt_pwd = 'admin';
     //  jump to room page
-    window.localStorage.setItem('nickname', 'aaa');
+    window.localStorage.setItem('nickname', nickname);
+    window.localStorage.setItem('userid', userid);
     window.localStorage.setItem('token', token);
     window.localStorage.setItem('roomid', roomid);
     window.localStorage.setItem('mqtt_addr', mqtt_addr);
     window.localStorage.setItem('mqtt_topic', mqtt_topic);
+    window.localStorage.setItem('mqtt_user', mqtt_user);
+    window.localStorage.setItem('mqtt_pwd', mqtt_pwd);
     window.location.href='index.html';
     return;
   }
 
-  const nickname = edit_nick.value;
   const pwd = edit_pwd.value;
   if (nickname == '') {
     alert('请输入您的昵称');
@@ -142,3 +148,16 @@ const fullscreen = function() {
     // 浏览器不支持全屏API或已被禁用
   }
 };
+
+function generateUUID() {
+  let d = new Date().getTime();
+  if (window.performance && typeof window.performance.now === 'function') {
+    d += performance.now(); //  use high-precision timer if available
+  }
+  const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = (d + Math.random() * 16) % 16 | 0;
+    d = Math.floor(d / 16);
+    return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+  return uuid;
+}

@@ -36,7 +36,7 @@ function mqtt_init(callback) {
     password: 'public',
     rejectUnauthorized: false
   };
-  const connectUrl = 'wss://test.nb666.com:8084/mqtt';
+  const connectUrl = 'wss://mqtt.nb666.com:8084/mqtt';
   mqtt_client = mqtt.connect(connectUrl, options);
 
   //  event monitor
